@@ -166,23 +166,7 @@ input{
   min-height: 70px;
   width: 360px;
 }
-.button-base-1 {
-  align-items: flex-start;
-  background-color: #56d8d8;
-  border-radius: 8px;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -o-border-radius: 8px;
-  box-shadow: 0px 1px 2px #1018280d;
-  display: flex;
-  height: 3rem;
-  margin-top: 1.5rem;
-  padding: .5rem;
-  overflow: hidden;
-  width: 23rem;
 
-}
 button {
   align-items: flex-start;
   border-radius: 8px;
