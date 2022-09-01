@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
       let password = loginForm.controls.password?.value
       //'kminchelle','0lelplR'
       this.userService.getUser('kminchelle','0lelplR').subscribe((data) => {
-        console.log(sessionStorage)
+
         this.router.navigate(['/products'])
       })
 

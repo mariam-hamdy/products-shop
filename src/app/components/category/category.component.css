@@ -1,0 +1,46 @@
+.category {
+
+  margin-top: 7.4rem;
+  margin-left: 5rem;
+  height: 30rem;
+  width: 15rem;
+  border-radius: 0.5rem;
+  border-width: 0.5px;
+  border-style: solid;
+  border-color: rgba(65, 65, 65, 0.502);
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  padding: .5rem;
+
+}
+.input {
+  width: 1.3em;
+  height: 1.4em;
+  background-color: white;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  outline: none;
+  cursor: pointer;
+  margin-right: .5rem;
+
+
+
+}
+.label {
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}
+.input:hover  {
+  cursor: pointer;
+}
+.label:hover {
+  cursor: pointer;
+}
+h3 {
+  font-family: 'Inter', sans-serif;
+  margin-bottom: .6rem;
+}

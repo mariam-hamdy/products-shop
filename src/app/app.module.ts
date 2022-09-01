@@ -13,6 +13,7 @@ import { ProductsComponent } from './components/products/products.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { LoginPageComponent } from './components/login-page/login-page.component';
+import { CategoryComponent } from './components/category/category.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { LoginPageComponent } from './components/login-page/login-page.component
     ProductItemComponent,
     HomeComponent,
     ProductsComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    CategoryComponent
   ],
   imports: [
     BrowserModule,
