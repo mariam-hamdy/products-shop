@@ -1,33 +1,35 @@
-<div class="product-item overlap-group-1 border-0-5px-cape-code">
+<div class="product-item  border-0-5px-cape-code">
 
 
-  <div class="overlap-group-2">
+  <div class="overlap-group-2" [ngStyle]="{ 'background-image': 'url(' + imageUrl + ')'}">
+
+
     <div class="rectangle-102"></div>
 
 
     <div class="text inter-bold-oxford-blue-12px">
-      <span class="inter-bold-oxford-blue-12px">12%</span>
+      <span class="inter-bold-oxford-blue-12px">{{product.discountPercentage}}%</span>
     </div>
 
   </div>
 
+
+
   <div class="i-phone inter-bold-oxford-blue-20px">
-    <span class="inter-bold-oxford-blue-20px">Iphone 9</span>
+    <span class="inter-bold-oxford-blue-20px">{{product.title}}</span>
   </div>
 
-  <p class="an-apple-mobile-whic inter-normal-oxford-blue-14px">
+  <p class="description inter-normal-oxford-blue-14px">
     <span class="inter-normal-oxford-blue-14px">
-      an apple mobile which is nothing like apple mobile
+      {{product.description}}
     </span>
   </p>
 
   <div class="price">
     <div class="number inter-bold-oxford-blue-12px">
-      <span class="inter-bold-oxford-blue-12px">549</span>
+      <span class="newprice inter-bold-oxford-blue-12px">{{newPrice}} USD</span>
     </div>
-    <div class="currency inter-normal-oxford-blue-14px">
-      <span class="inter-normal-oxford-blue-14px">USD</span>
-    </div>
+
   </div>
 
   <div class="brand-group">
@@ -36,7 +38,7 @@
     </div>
 
     <div class="apple inter-normal-oxford-blue-14px">
-      <span class="inter-normal-oxford-blue-14px">Apple</span>
+      <span class="inter-normal-oxford-blue-14px">{{product.brand}}</span>
     </div>
 
   </div>
@@ -48,7 +50,7 @@
     </div>
 
     <div class="category-name inter-normal-oxford-blue-14px">
-      <span class="inter-normal-oxford-blue-14px">Smartphone</span>
+      <span class="inter-normal-oxford-blue-14px">{{product.category}}</span>
     </div>
 
   </div>
@@ -61,7 +63,7 @@
     </div>
 
     <div class="category-name inter-normal-oxford-blue-14px">
-      <span class="inter-normal-oxford-blue-14px">50</span>
+      <span class="inter-normal-oxford-blue-14px">{{product.stock}}</span>
     </div>
 
   </div>

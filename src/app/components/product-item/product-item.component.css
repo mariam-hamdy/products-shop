@@ -1,17 +1,17 @@
-.overlap-group-1 {
+.product-item {
   background-color: rgba(255, 255, 255, 0.502);
-  border-radius: 8px;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -o-border-radius: 8px;
+  border-radius: .5rem;
+  -webkit-border-radius: .5rem;
+  -moz-border-radius: .5rem;
+  -ms-border-radius: .5rem;
+  -o-border-radius: .5rem;
   display: flex;
   flex-direction: column;
-  margin-left: 23px;
-  margin-top: -0.5px;
-  min-height: 581px;
-  padding: 0.5px 0;
-  width: 283px;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+  padding: .2rem 0;
+  width: 21rem;
+  height: 27rem;
 }
 
 .border-0-5px-cape-code {
@@ -33,41 +33,43 @@
   font-weight: 400;
   color: rgba(52, 64, 84, 1);
 }
+
+.overlap-group-2 {
+  background: transparent no-repeat center;
+  background-size: cover;
+  height: 500px;
+  position: relative;
+}
+
 .text {
-  left: 21px;
   letter-spacing: 0;
   position: absolute;
   text-align: center;
-  top: 15px;
-}
-
-.overlap-group-2 {
-  background-image: url('../../../assets/iphone.jpg');
-  background-size: 100% 100%;
-  height: 257px;
-  margin-left: 0.5px;
-  position: relative;
+  padding: 1.5rem;
 
 }
+
 
 .rectangle-102 {
   background-color: rgba(86, 216, 216, 1);
-  border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  height: 23px;
-  left: 13px;
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
+  height: 1.9rem;
+  left: 1rem;
   position: absolute;
-  top: 12px;
-  width: 71px;
+  top: 1rem;
+  width: 3.4rem;
+
+  text-align: center;
 }
 .i-phone {
   letter-spacing: 0;
-  margin-left: 16px;
-  margin-top: 14px;
-  min-height: 24px;
+  margin-left: 1rem;
+  margin-top: .5rem;
+
 }
 .inter-bold-oxford-blue-20px {
   font-size: 20px;
@@ -77,35 +79,26 @@
   color: rgba(52, 64, 84, 1);
 }
 
-.an-apple-mobile-whic {
+.description {
   align-self: center;
   letter-spacing: 0;
-  margin-right: 12px;
-  margin-top: 8px;
-  min-height: 34px;
-  width: 239px;
+  margin-left: 1rem;
+  margin-top: .5rem;
 }
 .price {
   display: flex;
-  margin-left: 14.5px;
-  margin-top: 24px;
-  height: 17px;
-  width: 70px;
+  margin-left: 1rem;
+  margin-top: .5rem;
   position: relative;
 }
 
 .number {
   letter-spacing: 0;
-  left: 2px;
+
   position: absolute;
   top: 0;
 }
-.currency {
-  left: 38px;
-  letter-spacing: 0;
-  position: absolute;
-  top: 0;
-}
+
 .inter-bold-oxford-blue-12px {
   font-size: 12px;
   font-family: 'Inter', sans-serif;
@@ -113,41 +106,36 @@
   font-weight: 700;
   color: rgba(52, 64, 84, 1);
 }
+.newprice {
+  font-size: 1rem;
+}
 .brand-group {
   display: flex;
-  height: 17px;
-  margin-left: 16.5px;
-  margin-top: 21px;
-  min-width: 87px;
+  margin-left: 1rem;
+  margin-top: 1.5rem;
 
 }
 .brand {
   letter-spacing: 0;
-  min-height: 17px;
-  min-width: 43px;
+
 }
 .apple {
   letter-spacing: 0;
-  margin-left: 4px;
-  min-height: 17px;
+  margin-left: .2rem;
 }
 
 .category-group {
   display: flex;
-  height: 17px;
-  margin-left: 16.5px;
-  margin-top: 8px;
-  min-width: 166px;
+  margin-left: 1rem;
+  margin-top: .5rem;
 }
 .category {
   letter-spacing: 0;
-  min-height: 17px;
-  min-width: 66px;
+
 }
 .category-name {
   letter-spacing: 0;
-  margin-left: 8px;
-  min-height: 17px;
+  margin-left: .2rem;
 }
 .opensans-bold--oxford-blue-16px {
   font-size: 16px;
@@ -157,23 +145,24 @@
   color: rgba(52, 64, 84, 1);
 }
 .button-primary {
-  align-self: center;
+  align-items: center;
   background-color: rgba(86, 216, 216, 1);
-  border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
   display: flex;
-  height: 50px;
-  margin-right: 1px;
-  margin-top: 16px;
-  min-width: 250px;
-  padding: 13px 71px;
+  height: 2.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem ;
+  margin-left: 1rem;
+  width: 90%;
+  padding: 1rem;
 }
 .add-to-cart {
   letter-spacing: 0;
-  min-height: 22px;
-  min-width: 107px;
-  text-align: center;
+  align-items: center;
+  margin-left: 5rem;
 }
+

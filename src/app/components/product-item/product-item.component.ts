@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { IOneProduct } from 'src/app/models/oneProduct';
 
 @Component({
   selector: 'app-product-item',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductItemComponent implements OnInit {
 
+  oneProduct: IOneProduct[]= []
+  @Input() product!: IOneProduct
+  imageUrl: string=''
+  newPrice: string=''
   constructor() { }
 
   ngOnInit(): void {
+    this.imageUrl=this.product.images[0]
+    this.newPrice = JSON.stringify(this.product.price)
+
   }
 
 }

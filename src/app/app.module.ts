@@ -8,6 +8,10 @@ import { LoginComponent } from './components/login/login.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { NavbarSearchComponent } from './shared/navbar-search/navbar-search.component';
 import { ProductItemComponent } from './components/product-item/product-item.component';
+import { HomeComponent } from './components/home/home.component';
+import { ProductsComponent } from './components/products/products.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -17,11 +21,15 @@ import { ProductItemComponent } from './components/product-item/product-item.com
     LoginComponent,
     FooterComponent,
     NavbarSearchComponent,
-    ProductItemComponent
+    ProductItemComponent,
+    HomeComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
