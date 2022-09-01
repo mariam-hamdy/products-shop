@@ -1,7 +1,7 @@
 
-<app-navbar-search></app-navbar-search>
+<app-navbar-search (search)="searchParent($event)"></app-navbar-search>
 <div class="container">
   <app-category></app-category>
-  <app-products></app-products>
+  <app-products [search]="searchValue"></app-products>
 </div>
 

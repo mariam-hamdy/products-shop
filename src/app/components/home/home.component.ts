@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+
+  searchValue: string =''
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  searchParent(value: string) {
+    this.searchValue = value
   }
 
 }

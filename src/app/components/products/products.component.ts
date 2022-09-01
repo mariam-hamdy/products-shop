@@ -1,4 +1,4 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { IOneProduct } from 'src/app/models/oneProduct';
 import { IProduct } from 'src/app/models/product';
 import { ProductService } from 'src/app/services/product.service';
@@ -14,6 +14,7 @@ export class ProductsComponent implements OnInit {
 
   products: IProduct[] = []
   oneProduct: IOneProduct[] =[]
+  @Input() search!: string
 
 
   constructor(private productService: ProductService) { }
@@ -30,6 +31,22 @@ export class ProductsComponent implements OnInit {
     })
 
     this.productService.getProducts()
+
+  }
+
+
+  get filteredProducts() {
+    if(!this.search) {
+      return this.products[0]?.products
+
+    }
+
+    let filtered = this.products[0]?.products.filter(item => {
+      let newItem = item.title.toLowerCase()
+      return newItem.startsWith(this.search.toLowerCase())
+    })
+    console.log(filtered, this.search)
+    return filtered
 
   }
 

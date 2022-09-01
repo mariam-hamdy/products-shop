@@ -1,7 +1,7 @@
 
 <div class="products-container">
 
-  <div *ngFor="let product of products[0]?.products">
+  <div *ngFor="let product of filteredProducts">
     <app-product-item [product]="product"></app-product-item>
   </div>
 

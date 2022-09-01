@@ -30,7 +30,7 @@ export class CategoryComponent implements OnInit {
   loadProducts() {
     this.productService.getProductSubject().subscribe((data: IProduct[]) => {
       this.products = data
-      console.log(this.products)
+
     })
 
     this.productService.getProducts()

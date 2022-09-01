@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { UserService } from 'src/app/services/user.service';
+
 
 @Component({
   selector: 'app-navbar-search',
@@ -8,6 +9,8 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class NavbarSearchComponent implements OnInit {
 
+  @Output() search = new EventEmitter<string>()
+  searchValue: string=''
   constructor(private userService: UserService) { }
 
   ngOnInit(): void {
@@ -17,4 +20,8 @@ export class NavbarSearchComponent implements OnInit {
     this.userService.logout()
   }
 
+  searchChild(value: string) {
+    value = this.searchValue
+    this.search.emit(value)
+  }
 }
