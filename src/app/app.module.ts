@@ -12,6 +12,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ProductsComponent } from './components/products/products.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { LoginPageComponent } from './components/login-page/login-page.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     NavbarSearchComponent,
     ProductItemComponent,
     HomeComponent,
-    ProductsComponent
+    ProductsComponent,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,

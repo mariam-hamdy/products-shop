@@ -14,43 +14,74 @@
   </div>
 
 
-
-
   <div class="content-3">
-    <div class="form">
+
+    <form class="form" #loginForm="ngForm" (submit)="login(loginForm)">
+
+
       <div class="input-field">
-        <div class="label inter-medium-oxford-blue-14px">
-          <span class="inter-medium-oxford-blue-14px">Email</span>
-        </div>
-        <div class="input border-1px-mischka">
-          <div class="text inter-normal-pale-sky-16px">
-            <span class="inter-normal-pale-sky-16px">Enter your email</span>
-          </div>
+
+        <label for="email" class="label inter-medium-oxford-blue-14px">Email</label>
+        <div class="input-class">
+          <input type="text" name="email" placeholder="Enter your email" ngModel required>
         </div>
 
       </div>
 
-      <div class="input-field-1">
-        <div class="label inter-medium-oxford-blue-14px">
-          <span class="inter-medium-oxford-blue-14px">password</span>
-        </div>
-        <div class="input border-1px-mischka">
-          <div class="text inter-normal-pale-sky-16px">
-            <span class="inter-normal-pale-sky-16px">........</span>
-          </div>
+      <div class="input-field">
+        <label for="password" class="label inter-medium-oxford-blue-14px">Password</label>
+        <div class="input-class">
+          <input type="password" name="password" placeholder="Enter your password" ngModel required>
         </div>
       </div>
 
 
+      <button [disabled]="loginForm.invalid">Sign in</button>
+
+
+    </form>
 
   </div>
 
 
-  <div class="button-base-1">
-    <div class="text inter-medium-oxford-blue-16px">
-      <span class="inter-medium-oxford-blue">Sign in</span>
+
+</div>
+
+
+<!--<div class="content-3">
+  <div class="form">
+
+    <div class="input-field">
+      <div class="label inter-medium-oxford-blue-14px">
+        <span class="inter-medium-oxford-blue-14px">Email</span>
+      </div>
+      <div class="input border-1px-mischka">
+        <div class="text inter-normal-pale-sky-16px">
+          <span class="inter-normal-pale-sky-16px">Enter your email</span>
+        </div>
+      </div>
+
     </div>
-  </div>
-</div>
+
+    <div class="input-field-1">
+      <div class="label inter-medium-oxford-blue-14px">
+        <span class="inter-medium-oxford-blue-14px">password</span>
+      </div>
+      <div class="input border-1px-mischka">
+        <div class="text inter-normal-pale-sky-16px">
+          <span class="inter-normal-pale-sky-16px">........</span>
+        </div>
+      </div>
+    </div>
+
+
 
 </div>
+
+
+<div class="button-base-1">
+  <div class="text inter-medium-oxford-blue-16px">
+    <span class="inter-medium-oxford-blue">Sign in</span>
+  </div>
+</div>
+</div>-->
