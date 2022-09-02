@@ -99,23 +99,6 @@ export class ProductsComponent implements OnInit {
 
 
 
-  // showMoreProducts() {
-  //   this.additionalLoading = true
-  //   this.productPageCounter = this.productPageCounter +1
 
-  //   this.productService.getProductSubject().subscribe((data: any) => {
-  //     this.products = [...this.products[0].products, ...data]
-  //     this.additionalLoading = false
-  //     console.log(data)
-
-  //     this.route.navigate(['/product'], { queryParams: { page: this.productPageCounter } });
-
-  //   })
-  //   this.productService.getProducts(9,this.productPageCounter)
-
-
-
-
-  // }
 
 }
