@@ -16,15 +16,20 @@ export class ProductService {
 
 
 
-  getProducts() {
-    if(this.products.length === 0) {
-      this.http.get(environment.serverUrl+'products').subscribe((data: any) => {
+  getProducts(limitOfResults=9) {
+
+      this.http.get(environment.serverUrl+'products',{
+        params: {
+          limit: limitOfResults
+
+        }
+      }).subscribe((data: any) => {
         this.products = this.products.concat(data as IProduct[])
         this.productSubject.next([...this.products])
       });
-    } else {
-      this.productSubject.next([...this.products])
-    }
+
+      // this.productSubject.next([...this.products])
+
   }
 
   getProductSubject(): Observable<IProduct[]> {

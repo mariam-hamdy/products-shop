@@ -1,7 +1,9 @@
-import { Component, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit, Output, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { IOneProduct } from 'src/app/models/oneProduct';
 import { IProduct } from 'src/app/models/product';
 import { ProductService } from 'src/app/services/product.service';
+
 
 @Component({
   selector: 'app-products',
@@ -15,39 +17,75 @@ export class ProductsComponent implements OnInit {
   products: IProduct[] = []
   oneProduct: IOneProduct[] =[]
   @Input() search!: string
+  @Input() checked!: string
+
+  productPageCounter: number = 1
+  additionalLoading: boolean= false
 
 
-  constructor(private productService: ProductService) { }
+
+  constructor(private productService: ProductService, private route: Router) { }
 
   ngOnInit(): void {
     this.loadProducts()
   }
+
+
 
   loadProducts() {
     this.productService.getProductSubject().subscribe((data: IProduct[]) => {
       this.products = data
 
 
+
     })
 
-    this.productService.getProducts()
+    this.productService.getProducts(30)
 
   }
+
+
 
 
   get filteredProducts() {
-    if(!this.search) {
-      return this.products[0]?.products
+    let filtered = this.products[0]?.products
+
+    if(this.search) {
+      filtered = this.products[0]?.products.filter(item => {
+        let newItem = item.title.toLowerCase()
+        return newItem.startsWith(this.search.toLowerCase())
+      })
+
+    }
+    if(this.checked) {
+      filtered = this.products[0]?.products.filter(item => {
+        return item.category.startsWith(this.checked.toLowerCase())
+      })
 
     }
 
-    let filtered = this.products[0]?.products.filter(item => {
-      let newItem = item.title.toLowerCase()
-      return newItem.startsWith(this.search.toLowerCase())
-    })
-    console.log(filtered, this.search)
     return filtered
 
   }
+
+
+  // showMoreProducts() {
+  //   this.additionalLoading = true
+  //   this.productPageCounter = this.productPageCounter +1
+
+  //   this.productService.getProductSubject().subscribe((data: any) => {
+  //     this.products = [...this.products[0].products, ...data]
+  //     this.additionalLoading = false
+  //     console.log(data)
+
+  //     this.route.navigate(['/product'], { queryParams: { page: this.productPageCounter } });
+
+  //   })
+  //   this.productService.getProducts(9,this.productPageCounter)
+
+
+
+
+  // }
 
 }

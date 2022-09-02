@@ -7,7 +7,8 @@ import { AuthGaurdService } from './services/auth-gaurd.service';
 
 const routes: Routes = [
   {path: 'login', component: LoginPageComponent},
-  {path: 'products', component: HomeComponent, canActivate: [AuthGaurdService]},
+  {path: 'products', component: HomeComponent, canActivate: [AuthGaurdService] },
+
   {path: '', redirectTo: 'login', pathMatch: 'full'},
   {path: '**', component: LoginPageComponent}
 ];
@@ -17,3 +18,6 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+
+//{path: 'products/:id', component: HomeComponent},

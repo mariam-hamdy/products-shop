@@ -14,6 +14,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { CategoryComponent } from './components/category/category.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 
 @NgModule({
@@ -28,12 +30,15 @@ import { CategoryComponent } from './components/category/category.component';
     ProductsComponent,
     LoginPageComponent,
     CategoryComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NoopAnimationsModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

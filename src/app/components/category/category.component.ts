@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { IOneProduct } from 'src/app/models/oneProduct';
 import { IProduct } from 'src/app/models/product';
 import { CategoryService } from 'src/app/services/category.service';
@@ -13,6 +13,14 @@ export class CategoryComponent implements OnInit {
 
   categories: string[]=[]
   products: IProduct[]=[]
+
+  @Output() checked = new EventEmitter<any>()
+  checkbox: boolean = false
+  checkboxName: string=''
+  // [checked]="checkbox"
+  // (click)="changeChecked()"
+
+
 
   constructor(private categoryService: CategoryService, private productService:ProductService) { }
 
@@ -33,8 +41,19 @@ export class CategoryComponent implements OnInit {
 
     })
 
-    this.productService.getProducts()
+    this.productService.getProducts(30)
 
   }
+
+  isChecked(value: any) {
+
+    this.checked.emit(value)
+  }
+  changeChecked(e: any) {
+     this.checkbox = !this.checkbox
+     this.checkboxName = e.target.name
+  }
+
+
 
 }

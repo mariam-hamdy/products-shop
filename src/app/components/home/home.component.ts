@@ -9,6 +9,7 @@ export class HomeComponent implements OnInit {
 
 
   searchValue: string =''
+  checkedValue: string = ''
   constructor() { }
 
   ngOnInit(): void {
@@ -16,6 +17,9 @@ export class HomeComponent implements OnInit {
 
   searchParent(value: string) {
     this.searchValue = value
+  }
+  checkedParent(value: any) {
+    this.checkedValue = value
   }
 
 }

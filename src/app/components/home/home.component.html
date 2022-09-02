@@ -1,7 +1,7 @@
 
 <app-navbar-search (search)="searchParent($event)"></app-navbar-search>
 <div class="container">
-  <app-category></app-category>
-  <app-products [search]="searchValue"></app-products>
+  <app-category (checked)="checkedParent($event)"></app-category>
+  <app-products [search]="searchValue" [checked]="checkedValue"></app-products>
 </div>
 
