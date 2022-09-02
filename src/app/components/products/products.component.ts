@@ -22,6 +22,13 @@ export class ProductsComponent implements OnInit {
   productPageCounter: number = 1
   additionalLoading: boolean= false
 
+  //new
+  currentProduct!: IOneProduct;
+  currentIndex = -1;
+  title = '';
+  page = 1;
+  count = 0;
+  pageSize = 9;
 
 
   constructor(private productService: ProductService, private route: Router) { }
@@ -31,20 +38,42 @@ export class ProductsComponent implements OnInit {
   }
 
 
+  getRequestParams(page: number, pageSize: number): any {
+    let params: any = {};
+
+
+    if (page) {
+      params[`page`] = page - 1;
+    }
+
+    if (pageSize) {
+      params[`size`] = pageSize;
+    }
+
+
+    return params;
+  }
+
 
   loadProducts() {
+    const params = this.getRequestParams(this.page, this.pageSize);
+
+
     this.productService.getProductSubject().subscribe((data: IProduct[]) => {
-      this.products = data
+      this.products= data
 
 
 
     })
 
-    this.productService.getProducts(30)
+    this.productService.getProducts(params)
 
   }
 
-
+  handlePageChange(event: number): void {
+    this.page = event;
+    this.loadProducts();
+  }
 
 
   get filteredProducts() {
@@ -67,6 +96,7 @@ export class ProductsComponent implements OnInit {
     return filtered
 
   }
+
 
 
   // showMoreProducts() {

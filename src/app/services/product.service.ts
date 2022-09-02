@@ -16,14 +16,9 @@ export class ProductService {
 
 
 
-  getProducts(limitOfResults=9) {
+  getProducts(params: any) {
 
-      this.http.get(environment.serverUrl+'products',{
-        params: {
-          limit: limitOfResults
-
-        }
-      }).subscribe((data: any) => {
+      this.http.get(environment.serverUrl+'products',{params}).subscribe((data: any) => {
         this.products = this.products.concat(data as IProduct[])
         this.productSubject.next([...this.products])
       });

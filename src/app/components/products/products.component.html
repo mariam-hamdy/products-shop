@@ -1,12 +1,24 @@
 
 <div class="products-container">
 
-  <div *ngFor="let product of filteredProducts">
+  <div *ngFor="let product of filteredProducts | paginate : {
+    itemsPerPage: pageSize,
+    currentPage: page,
+    totalItems: count
+  };">
     <app-product-item [product]="product"></app-product-item>
   </div>
 
 </div>
 
+<div class="pagination">
+  <pagination-controls
+      previousLabel="Prev"
+      nextLabel="Next"
+      [responsive]="true"
+      (pageChange)="handlePageChange($event)"
+    ></pagination-controls>
+</div>
 
 <!-- <div class="pagination">
   <a routerLink="/products" [queryParams]="{page: productPageCounter}" ><button  (click)="showMoreProducts()">&laquo;</button> </a>

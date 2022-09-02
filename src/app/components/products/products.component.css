@@ -45,7 +45,4 @@ button:active {
 button:hover{
   background-color: #ddd;
 }
-mat-paginator {
-  margin-left: 30rem;
-  margin-bottom: 7rem;
-}
+

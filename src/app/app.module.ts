@@ -16,6 +16,7 @@ import { LoginPageComponent } from './components/login-page/login-page.component
 import { CategoryComponent } from './components/category/category.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 @NgModule({
@@ -38,7 +39,9 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     FormsModule,
     HttpClientModule,
     NoopAnimationsModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    NgxPaginationModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
